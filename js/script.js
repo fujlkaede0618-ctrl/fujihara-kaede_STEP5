@@ -23,11 +23,12 @@ alert("入力値が空です");
 return;
 }
 
-displayArea.textContent = text;
+
 
 displayArea.classList.toggle("highlight");
 
 addRow(text);
+
 });
 
 // 背景色変更
@@ -75,6 +76,10 @@ if (tableBody.rows.length >3) {
     tableBody.deleteRow(0);
 }
 addCount++;
+
+if (addCount >= 3) {
+    showBtn.style.display = "none";
+}
 
 }
 
