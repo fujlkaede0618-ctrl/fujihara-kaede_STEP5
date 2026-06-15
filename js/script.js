@@ -23,7 +23,7 @@ alert("入力値が空です");
 return;
 }
 
-
+displayArea.textContent = text;
 
 displayArea.classList.toggle("highlight");
 
@@ -65,6 +65,9 @@ tr.remove();
 
 addCount--;
 
+if (addCount < 3) {
+    showBtn.style.dosplay = "inline-block";
+}
 });
 tdBtn.appendChild(deleteBtn);
 
@@ -74,6 +77,10 @@ tr.appendChild(tdBtn);
 tableBody.appendChild(tr);
 if (tableBody.rows.length >3) {
     tableBody.deleteRow(0);
+}
+
+if (tableBody.rows.length > 3) {
+    tableBody.delateRow(0);
 }
 addCount++;
 
